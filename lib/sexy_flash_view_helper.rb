@@ -42,7 +42,7 @@ module SexyFlashViewHelper
         end #if timeout > 0
       end #if flash.has_key?(key)
     end #each do |key|
-    return the_flash.try(:html_safe)
+    return the_flash.html_safe rescue the_flash
   end 
 
 end
